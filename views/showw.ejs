@@ -1,0 +1,75 @@
+<%- include ('partials/header'); %>
+<html lang>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body >
+<table class="table table-dark" style="background-color: teal;">
+  <center><h2>ALL EVENTS</h2></center>
+    <thead style="color:black;">
+      <tr>
+        <th>NAME</th>
+        <th>Description</th>
+        <th>Venue</th>
+        <th>Date</th>
+        <th>Register here</th>
+        <!-- <th colspan="2">Modifications</th> -->
+      
+    
+         
+      </tr>
+    </thead>
+    <tbody style="color: beige;">
+      <%if (post.length >0){ %>
+      <% post.forEach(function(row){ %>
+      <tr>
+        <td><%= row.title %></td>
+        <td><%= row.Description %></td>
+        <td><%= row.Venue %></td>
+        <td><%= row.postDate %></td>
+        <td><a href="<%= row.link %>" style="color: yellow;"><%= row.link %></a></td>
+        <!-- <td><button class="btn btn-info">EDIT</button></td>
+        <td><button class="btn btn-danger">DELETE</button></td> -->
+         
+      </tr>
+      <% })}else{ %>
+        <tr>
+            <td colspan="6">No Record Found</td>
+            
+          </tr>
+        <% } %>
+    </tbody>
+  </table>
+</body>
+</html>
+  <!-- <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+    <%if (post.length >0){ %>
+        <% post.forEach(function(row){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <h4>
+                        <%= row.title %>
+                    </h4>
+                </div>
+            </div>
+        <% })}else{ %>
+             <h1>No Record Found</h1>
+            <% } %> -->
+
+</div>
+<div id="particles-js">
+</br>
+</br>
+</br>
+<div id="abc">
+</div>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="/js/script.js"></script>
+</div>
+
+

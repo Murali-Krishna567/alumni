@@ -1,0 +1,76 @@
+<%- include ('partials/header'); %>
+<html>
+<head>
+    <style>
+        li a {
+            display: block;
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+          }
+          
+        
+          li a:hover {
+            background-color:cornflowerblue;
+            color: white;
+          }</style>
+          <!-- <div id="particles-js"> -->
+            <!-- <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+             
+            <script src="/js/script.js"></script>
+             
+        </div> -->
+</head>
+<body style="background-color:blueviolet;">
+    <ul style="list-style-type: none;margin: 0;padding: 0;width: 150px;background-color:blueviolet; margin-left: 0cm;margin-top: -0.5cm;">
+        <li><a href="/alumni/new">Create Alumini Account</a></li>
+        <li><a href="/alumni/search">Search</a></li>
+        <li><a href="/chat">Chat</a></li>
+        <li><a href="/posts">Events</a></li>
+      </ul>
+<div class="container" style="margin-left: 10.1%;margin-top: -4.5cm; background-color:blueviolet;">
+
+    <header class="jumbotron" style="margin-top: 1cm;background-color: teal;"  >
+        <div class="container" style="color: black;">
+            <center>
+                <h1>Welcome to ALUMNI'S Directory</h1>
+            </center>
+            <center>
+                <h2> View our alumnis from all over the world! </h2>
+            </center>
+            <p></p> 
+
+        </div>
+            
+    </header>
+
+
+
+
+    <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <% alumni.forEach(function(alumni){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail" style="background-color:salmon;">
+                    <!-- <img src="<%= alumni.image %>"> -->
+                    <img src="assets/alumni.png" width="20%">
+                    <div class="caption">
+                        <h4>
+                            <%= alumni.name %>
+                        </h4>
+                    </div>
+                    <p>
+                        <a href="/alumni/<%= alumni._id%>" class="btn btn-primary">More Info</a>
+                    </p>
+                </div>
+            </div>
+            <% }); %>
+    </div>
+</div>
+
+
+
+
+
+
+</body>
+</html>

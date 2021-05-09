@@ -1,0 +1,40 @@
+<html lang>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="row text-center" style="display:flex; flex-wrap: wrap;">
+    <% alumni.forEach(function(alumni){ %>
+        <table class="table table-striped" style="margin-left: 5cm;">
+            <thead>
+                <tr>
+                <th>NAME</th>
+                <th>BRANCH</th>
+                <th>BATCH</th>
+                <th>COLLEGE</th>
+                <th colspan="2" style="margin-left: 20%;">VERIFICATION</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><%= alumni.name %></td>
+                    <td><%= alumni.branch %></td>
+                    <td><%= alumni.batch %></td>
+                    <td><%= alumni.college %></td>
+                    <td><%= alumni.author.id %></td>
+                    <td><button class="btn btn-primary">ACCEPT</button></td>
+                    <td><button class="btn btn-danger">DENY</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <% }); %>
+</div>
+</body>
+</html>
+

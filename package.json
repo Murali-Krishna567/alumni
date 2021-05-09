@@ -1,0 +1,39 @@
+{
+  "name": "alumni-tracking-systemv6",
+  "description": "> An Alumini Tracking System",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-mailer": "^0.3.1",
+    "express-session": "^1.17.1",
+    "format-message": "^6.2.3",
+    "jquery": "^1.11.1",
+    "mdbootstrap": "^4.12.0",
+    "method-override": "^3.0.0",
+    "moment": "^2.24.0",
+    "mongoose": "^5.12.5",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.5.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^6.1.0",
+    "request": "^2.88.2",
+    "socket.io": "^2.4.0",
+    "twilio": "^3.61.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

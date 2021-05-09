@@ -1,0 +1,35 @@
+<%- include ('partials/header'); %>
+
+    <div class="container">
+        <center><h2><b>NEW EVENT</b></h2></center>
+        <div class="row">
+            <h1 style="text-align: center;"></h1>
+            <div style="width: 30%; margin: 30px auto;">
+                <form action="/post" method="POST">
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="title" placeholder="Event Title" required>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="Description" placeholder="Description">
+                    </div>
+                     
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="Venue" placeholder="Venue" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input class="form-control" type="date" name="postDate" placeholder="Date" required>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="link" placeholder="Registration Link" >
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-lg btn-primary btn-block">Submit</button>
+                    </div>
+                    
+                </form>
+                <a href="/alumni">Go Back</a>
+            </div>
+
+        </div>
+    </div>
