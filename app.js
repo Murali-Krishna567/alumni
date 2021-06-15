@@ -650,8 +650,7 @@ app.get("/admin",function(req,res){
         }
     });
 });
-
- 
-server.listen('3000', () => {
+const port = Process.env.PORT || 3000 ;
+server.listen(port, () => {
     console.log('Server listening on Port 3000');
   })
